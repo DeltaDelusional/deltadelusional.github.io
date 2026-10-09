@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0b10" />
+  <meta name="description" content="Portfolio of Amreetangshu Kashyap Bhuyan — tech enthusiast, curious learner, and aspiring developer." />
+  <title>Amreetangshu Kashyap Bhuyan — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0a0b10;--panel:#11131b;--panel2:#151823;--text:#f3f4f8;--muted:#a0a5b7;--line:rgba(255,255,255,.1);--accent:#a6ffcb;--accent2:#9eabff;--max:1120px}
+    *{box-sizing:border-box} html{scroll-behavior:smooth;scroll-padding-top:86px}
+    body{margin:0;background:radial-gradient(ellipse at 75% 0%,rgba(89,103,204,.16),transparent 38%),var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none} a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+    .wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .nav{position:sticky;top:0;z-index:10;background:rgba(10,11,16,.82);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    .nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{font-weight:800;letter-spacing:-.06em;font-size:1.2rem}.brand span{color:var(--accent)}
+    .navlinks{display:flex;gap:25px;color:var(--muted);font-size:.88rem}.navlinks a:hover{color:var(--accent)}
+    .menu{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:10px;padding:8px 12px}
+    .hero{padding:104px 0 86px;display:grid;grid-template-columns:1.25fr .75fr;gap:64px;align-items:center;min-height:590px}
+    .eyebrow,.mono{font-family:"DM Mono",monospace;font-size:.76rem;letter-spacing:.11em;text-transform:uppercase;color:var(--accent)}
+    .eyebrow{display:flex;align-items:center;gap:10px}.dot{width:7px;height:7px;background:var(--accent);border-radius:50%;box-shadow:0 0 16px var(--accent)}
+    h1{font-size:clamp(3rem,6.7vw,5.7rem);line-height:.99;letter-spacing:-.075em;margin:24px 0}
+    h1 .accent{color:var(--accent)}.intro{max-width:590px;color:#b9bdca;font-size:1.08rem}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 17px;border-radius:12px;font-weight:800;font-size:.9rem;border:1px solid var(--line);transition:transform .2s,border-color .2s}
+    .btn:hover{transform:translateY(-2px);border-color:var(--accent)}.btn.primary{background:var(--accent);color:#09110c;border-color:var(--accent)}
+    .hero-card{border:1px solid var(--line);border-radius:24px;padding:25px;background:linear-gradient(145deg,rgba(166,255,203,.08),rgba(158,171,255,.06));position:relative;overflow:hidden}
+    .hero-card:before{content:"";position:absolute;width:210px;height:210px;border-radius:50%;background:rgba(158,171,255,.13);filter:blur(55px);right:-75px;top:-70px}
+    .terminal{position:relative;border:1px solid var(--line);border-radius:15px;background:rgba(7,8,13,.7);padding:17px}
+    .terminal-top{display:flex;gap:6px;padding-bottom:17px;border-bottom:1px solid var(--line);margin-bottom:16px}.terminal-top i{width:8px;height:8px;border-radius:50%;background:#555b70}.terminal-top i:first-child{background:#ff827d}.terminal-top i:nth-child(2){background:#ffd479}.terminal-top i:nth-child(3){background:#a6ffcb}
+    .code{font-family:"DM Mono",monospace;font-size:.83rem;color:#c6c9d6;line-height:2}.code .green{color:var(--accent)}.code .purple{color:var(--accent2)}.code .dim{color:#777e93}
+    .card-caption{position:relative;margin-top:20px;color:var(--muted);font-size:.85rem}
+    section{padding:78px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:30px}
+    .kicker{font-family:"DM Mono",monospace;color:var(--accent);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase}
+    h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.065em;line-height:1.1;margin:10px 0 0}
+    .section-note{max-width:410px;color:var(--muted);font-size:.92rem}
+    .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
+    .panel{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:26px}
+    .panel p{color:#b7bbca;margin:0 0 14px}.panel p:last-child{margin-bottom:0}
+    .values{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .value{padding:17px;border-radius:14px;background:var(--panel2);border:1px solid var(--line)}
+    .value .icon{font-size:1.3rem}.value h3{font-size:.96rem;margin:9px 0 4px}.value p{font-size:.82rem;margin:0;color:var(--muted)}
+    .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .project{min-height:275px;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:transform .2s,border-color .2s}
+    .project:hover{transform:translateY(-4px);border-color:rgba(166,255,203,.4)}
+    .project .num{font-family:"DM Mono",monospace;color:var(--accent);font-size:.78rem}
+    .project h3{font-size:1.22rem;line-height:1.25;letter-spacing:-.035em;margin:20px 0 10px}
+    .project p{font-size:.88rem;color:var(--muted);margin:0}
+    .tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:20px}
+    .tag{font-family:"DM Mono",monospace;font-size:.68rem;color:#cbd0e0;border:1px solid var(--line);border-radius:7px;padding:5px 8px}
+    .project-foot{margin-top:auto;padding-top:23px;color:var(--accent);font-size:.83rem}
+    .skills{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .skill{background:var(--panel);border:1px solid var(--line);padding:19px;border-radius:15px}
+    .skill h3{margin:0 0 6px;font-size:.95rem}.skill p{margin:0;color:var(--muted);font-size:.8rem}
+    .learning{border:1px solid rgba(166,255,203,.23);background:linear-gradient(120deg,rgba(166,255,203,.07),rgba(158,171,255,.06));border-radius:22px;padding:30px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .learning h3{font-size:1.4rem;letter-spacing:-.04em;margin:0 0 7px}.learning p{margin:0;color:var(--muted);max-width:640px;font-size:.9rem}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .contact-link{display:flex;justify-content:space-between;align-items:center;padding:20px;border:1px solid var(--line);border-radius:15px;background:var(--panel);gap:12px}
+    .contact-link small{display:block;color:var(--muted);font-size:.76rem}.contact-link strong{font-size:.95rem}.arrow{color:var(--accent);font-size:1.2rem}
+    footer{padding:25px 0 35px;color:var(--muted);font-size:.8rem;display:flex;justify-content:space-between;gap:20px}
+    @media(max-width:850px){.hero{grid-template-columns:1fr;gap:38px;padding-top:75px;min-height:auto}.hero-card{max-width:560px}.project-grid{grid-template-columns:1fr 1fr}.skills{grid-template-columns:1fr 1fr}.about-grid{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}}
+    @media(max-width:580px){.wrap{width:min(100% - 28px,var(--max))}.nav-inner{height:64px}.menu{display:block}.navlinks{display:none;position:absolute;top:63px;left:0;right:0;background:#0d0f16;padding:18px 22px 22px;flex-direction:column;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.hero{padding:62px 0}.project-grid,.contact-grid{grid-template-columns:1fr}.skills{grid-template-columns:1fr 1fr}.values{grid-template-columns:1fr 1fr}.panel{padding:21px}.learning{align-items:start;flex-direction:column}section{padding:60px 0}footer{flex-direction:column;gap:5px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#home">AKB<span>.</span></a>
+      <button class="menu" id="menuButton" aria-expanded="false" aria-controls="navlinks">Menu</button>
+      <nav class="navlinks" id="navlinks" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap hero" id="home">
+      <div>
+        <div class="eyebrow"><span class="dot"></span> Curious mind. Builder's mindset.</div>
+        <h1>Hey, I'm<br><span class="accent">Amreetangshu.</span></h1>
+        <p class="intro">A computer science student, tech enthusiast, and lifelong learner interested in turning ideas into useful things. I enjoy exploring technology, solving problems, and discovering how things work under the hood.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">Explore my work <span aria-hidden="true">↘</span></a>
+          <a class="btn" href="https://www.linkedin.com/in/amreetangshu-kashyap-bhuyan-37828036a/" target="_blank" rel="noreferrer">Connect on LinkedIn ↗</a>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Developer-themed illustration">
+        <div class="terminal">
+          <div class="terminal-top"><i></i><i></i><i></i></div>
+          <div class="code">
+            <div><span class="purple">const</span> person = {</div>
+            <div>&nbsp;&nbsp;name: <span class="green">"Amreetangshu"</span>,</div>
+            <div>&nbsp;&nbsp;mindset: <span class="green">"Always learning"</span>,</div>
+            <div>&nbsp;&nbsp;interests: [</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="green">"Technology"</span>,</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="green">"AI &amp; innovation"</span>,</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="green">"Problem solving"</span></div>
+            <div>&nbsp;&nbsp;]</div>
+            <div>};</div>
+            <div class="dim">// turning curiosity into progress...</div>
+          </div>
+        </div>
+        <div class="card-caption">Currently building skills, exploring ideas, and learning by doing.</div>
+      </aside>
+    </div>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head"><div><div class="kicker">01 / A little about me</div><h2>Curiosity is my<br>starting point.</h2></div><p class="section-note">I believe the best way to understand technology is to experiment with it, build things, and keep asking better questions.</p></div>
+        <div class="about-grid">
+          <div class="panel">
+            <p>I'm Amreetangshu Kashyap Bhuyan, a computer science student with a strong interest in technology and the way it can solve real-world problems.</p>
+            <p>I'm especially curious about software development, artificial intelligence, and practical applications of computing. I enjoy learning new concepts, breaking complex problems into smaller pieces, and collaborating with people who like to create.</p>
+            <p>This portfolio is a snapshot of my learning journey—not a claim to know everything, but a place to share what I'm exploring and what I build next.</p>
+          </div>
+          <div class="values">
+            <div class="value"><div class="icon">⌘</div><h3>Tech enthusiast</h3><p>Exploring tools, trends, and ideas shaping tomorrow.</p></div>
+            <div class="value"><div class="icon">↗</div><h3>Growth mindset</h3><p>Learning consistently and improving through practice.</p></div>
+            <div class="value"><div class="icon">◈</div><h3>Problem solver</h3><p>Enjoying the process of finding clear, useful solutions.</p></div>
+            <div class="value"><div class="icon">◎</div><h3>Open to collaboration</h3><p>Sharing ideas, learning with others, and building together.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head"><div><div class="kicker">02 / Selected work</div><h2>Ideas in progress.</h2></div><p class="section-note">A few areas I've worked on or am exploring. Add repository links and update each status as your projects evolve.</p></div>
+        <div class="project-grid">
+          <article class="panel project">
+            <div class="num">PROJECT / 01</div>
+            <h3>AI-Assisted Retinal Image Analysis</h3>
+            <p>Exploring how image preprocessing and efficient deep-learning models could support retinal image analysis, with a focus on image quality and practical deployment.</p>
+            <div class="tags"><span class="tag">AI / ML</span><span class="tag">Computer Vision</span><span class="tag">EfficientNet-B0</span></div>
+            <div class="project-foot">Research &amp; development concept ↗</div>
+          </article>
+          <article class="panel project">
+            <div class="num">PROJECT / 02</div>
+            <h3>C++ Programming Practice</h3>
+            <p>Building programming fundamentals through small exercises and problem-solving practice, with an emphasis on logical thinking and writing clearer code.</p>
+            <div class="tags"><span class="tag">C++</span><span class="tag">Problem Solving</span><span class="tag">Fundamentals</span></div>
+            <div class="project-foot">Learning by building ↗</div>
+          </article>
+          <article class="panel project">
+            <div class="num">PROJECT / 03</div>
+            <h3>Personal Portfolio Website</h3>
+            <p>A responsive personal site built to present my interests, learning journey, and projects in one place. Designed to be lightweight and easy to update.</p>
+            <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+            <div class="project-foot">This website ↗</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <div class="section-head"><div><div class="kicker">03 / Toolbox</div><h2>What I'm exploring.</h2></div><p class="section-note">These are areas of focus, not a claim of expert-level proficiency. Keep the list aligned with what you can confidently discuss.</p></div>
+        <div class="skills">
+          <div class="skill"><h3>Programming</h3><p>C++ · programming fundamentals</p></div>
+          <div class="skill"><h3>Web development</h3><p>HTML · CSS · JavaScript basics</p></div>
+          <div class="skill"><h3>Artificial intelligence</h3><p>Machine learning concepts · computer vision</p></div>
+          <div class="skill"><h3>Developer workflow</h3><p>Git · GitHub · documentation</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="learning">
+          <div><div class="kicker">Always in progress</div><h3>Interested in what comes next.</h3><p>I'm keen to learn from new challenges, collaborate on meaningful projects, and connect with people who are passionate about technology and building useful solutions.</p></div>
+          <a class="btn primary" href="https://www.linkedin.com/in/amreetangshu-kashyap-bhuyan-37828036a/" target="_blank" rel="noreferrer">Let's connect ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="section-head"><div><div class="kicker">04 / Say hello</div><h2>Let's build something.</h2></div><p class="section-note">Have an idea, opportunity, or just want to talk tech? Reach out through one of the links below.</p></div>
+        <div class="contact-grid">
+          <a class="contact-link" href="https://www.linkedin.com/in/amreetangshu-kashyap-bhuyan-37828036a/" target="_blank" rel="noreferrer"><span><small>PROFESSIONAL NETWORK</small><strong>LinkedIn</strong></span><span class="arrow">↗</span></a>
+          <!-- Replace YOUR_GITHUB_USERNAME with your actual GitHub username. -->
+          <a class="contact-link" href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" rel="noreferrer"><span><small>CODE &amp; REPOSITORIES</small><strong>GitHub</strong></span><span class="arrow">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap"><span>© <span id="year"></span> Amreetangshu Kashyap Bhuyan</span><span>Designed with curiosity and a little bit of code.</span></footer>
+  <script>
+    const menuButton = document.getElementById('menuButton');
+    const navlinks = document.getElementById('navlinks');
+    menuButton.addEventListener('click', () => {
+      const isOpen = navlinks.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+    });
+    navlinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navlinks.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', 'false');
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
